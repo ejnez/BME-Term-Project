@@ -82,6 +82,10 @@ python3 MSA.py full
 - full_full_final.fasta
 - full_DBD_final.fasta
 - full_IDR_final.fasta
+
+  
+**HMM_build.py**
+
   
 # basic download information #
 Biopython:
@@ -104,6 +108,10 @@ cd trimal
 cd Source
 
 make
+```
+HMMer:
+```
+sudo apt install hmmer
 ```
 
 
