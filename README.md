@@ -1,8 +1,10 @@
 # BME-Term-Project
 
-**Libraries used by each code:**
+**Code descriptions (libraries, output, and running)**
 
-Dataset_extraction.py
+**Dataset_extraction.py**
+
+*Libraries:*
 
 - requests
 - time
@@ -12,12 +14,59 @@ Dataset_extraction.py
 - Bio (biopython) 
 - sys
 
-MSA.py
+*Test run (only 5 species):*
+
+```
+python3 Dataset_extraction.py test
+```
+
+*Full run (all species):*
+
+```
+python3 Dataset_extraction.py full
+```
+
+*Output ({name} = full or test):*
+
+- {name}_foxo3_seq.fasta
+- {name}_foxo3_DBD.fasta
+- {name}_foxo3_IDR.fasta
+
+**MSA.py**
+
+*Libraries*
 
 - os
 - shutil
 - subprocess
 
+*Test run (only 5 species):*
+
+```
+python3 MSA.py test
+```
+
+*Full run (all species):*
+
+```
+python3 MSA.py full
+```
+
+*TEST RUN Output files:*
+- test_full_seq_aligned.fasta
+- test_foxo3_DBD.fasta
+- test_foxo3_IDR.fasta
+
+- test_full_final.fasta
+- test_DBD_final.fasta
+- test_IDR_final.fasta
+
+*FULL RUN Output files:*
+
+- full_full_final.fasta
+- full_DBD_final.fasta
+- full_IDR_final.fasta
+  
 # basic download information #
 Biopython:
 
@@ -42,7 +91,7 @@ make
 ```
 
 
-**other sorting stuff this part is not organized at all **
+**other sorting stuff this part is not organized at all**
 ```sudo apt install -y python3 python3-pip
 
 sudo apt install python3.12-venv
