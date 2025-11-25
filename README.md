@@ -20,11 +20,17 @@ MSA.py
 
 # basic download information #
 Biopython:
+
 ```pip install biopython```
+
 Requests:
+
 ```pip install requests```
+
 MAFFT:
+
 ```sudo apt-get install mafft```
+
 Trimal:
 ```
 git clone https://github.com/inab/trimal.git
