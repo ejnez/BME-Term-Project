@@ -3,7 +3,7 @@
 **Code descriptions (libraries, output, and running)**
 
 **Dataset_extraction.py**
-"""
+
 FOXO3 sequences are extracted from Uniprot, Ensembl, AND NCBI, in that order.
 If a sequence isn't found in Uniprot it's then searched in Ensembl, and if not found there
 it searches NCBI last. All NCBI sequences are inputted in BLAST to check for orthology using human FOXO3 sequence.
@@ -11,7 +11,7 @@ it searches NCBI last. All NCBI sequences are inputted in BLAST to check for ort
 The sequences are then split into 3 files, the full file has the entire sequences, the DBD file
 has only the DNA binding domain, using the coordinates given by the human FOXO3 sequence in uniprot (157-251).
 Finally the IDR file has all of the other (likely disordered regions).
-"""
+
 *Libraries:*
 
 - requests
@@ -41,11 +41,11 @@ python3 Dataset_extraction.py full
 - {name}_foxo3_IDR.fasta
 
 **MSA.py**
-"""
+
 The MSA file takes the sequence files from Data_extraction.py, aligns them using MAFFT and then trims the alignments
 using TrimAl (in order to reduce noise). The test run will output every file (for manually checking quality), so there will be the alignment files before trimming, and the full final sequencs after alignment and trimming.
 The full run will only output final sequences.
-"""
+
 *Libraries*
 
 - os
