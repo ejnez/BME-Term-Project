@@ -46,6 +46,12 @@ The MSA file takes the sequence files from Data_extraction.py, aligns them using
 using TrimAl (in order to reduce noise). The test run will output every file (for manually checking quality), so there will be the alignment files before trimming, and the full final sequencs after alignment and trimming.
 The full run will only output final sequences.
 
+MAFFT alignment parameters
+- DBD sequence: mafft --localpair --genafpair --maxiterate 1000 --reorder --adjustdirection --thread N infile *L-INS-i
+- IDR sequence and full sequence:  --genafpair --maxiterate 1000 --ep 0 --adjustdirection --thread N infile *E-INS-i
+
+I chose *L-INS-i for the DBD sequences because it's likely the most accurate, and since the DBD region is highly conserved I was certain alignment would be pretty clean (Kazutaka and Daron 2013). For the whole sequence, and IDR sequence I decided to use *E-INS-i with --ep 0 because there are a lot of disordered regions which might contribute to excess gaps (Kazutaka and Daron 2013). Both of these are accuracy oriented, which I prioritized since I only have a sample size of 30 species (Kazutaka and Daron 2013). 
+
 *Libraries*
 
 - os
@@ -131,3 +137,5 @@ trimal -h
 
 pip install biopython
 ```
+** CITATIONS **
+Kazutaka K, Daron M. S. 2013. MAFFT Multiple Sequence Alignment Software Version 7: Improvements in Performance and Usability, Molecular Biology and Evolution. 30:4(772–780). https://doi.org/10.1093/molbev/mst010
