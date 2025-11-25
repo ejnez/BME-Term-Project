@@ -1,6 +1,7 @@
 # BME-Term-Project
 
-**Libraries used by each code:**\n
+**Libraries used by each code:**
+
 Dataset_extraction.py
 
 - requests
@@ -23,7 +24,7 @@ MSA.py
 -git clone https://github.com/inab/trimal.git
 
 
-**other sorting stuff this part is not organized at all)**\n
+**other sorting stuff this part is not organized at all)**
 ```sudo apt install -y python3 python3-pip
 
 sudo apt install python3.12-venv
