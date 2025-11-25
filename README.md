@@ -2,6 +2,7 @@
 
 **Libraries used by each code:**
 Dataset_extraction.py
+
 - requests
 - time
 - urllib.parse
@@ -10,10 +11,11 @@ Dataset_extraction.py
 - Bio (biopython) 
 - sys
 
-MSA.py 
--os
--shutil
--subprocess
+MSA.py
+
+- os
+- shutil
+- subprocess
 
 # basic download information #
 -pip install biopython
