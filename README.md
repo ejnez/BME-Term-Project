@@ -42,9 +42,7 @@ python3 Dataset_extraction.py full
 
 **MSA.py**
 
-The MSA file takes the sequence files from Data_extraction.py, aligns them using MAFFT and then trims the alignments
-using TrimAl (in order to reduce noise). The test run will output every file (for manually checking quality), so there will be the alignment files before trimming, and the full final sequencs after alignment and trimming.
-The full run will only output final sequences.
+The MSA file takes the sequence files from Data_extraction.py, aligns them using MAFFT (Kazutaka and Daron 2013). Then alignments are trimmed using TrimAl (in order to reduce noise) (Capella-Gutiérrez et al 2009). The test run will output every file (for manually checking quality), so there will be the alignment files before trimming, and the full final sequencs after alignment and trimming. The full run will only output final sequences.
 
 MAFFT alignment parameters
 - DBD sequence: mafft --localpair --genafpair --maxiterate 1000 --reorder --adjustdirection --thread N infile *L-INS-i
@@ -137,5 +135,8 @@ trimal -h
 
 pip install biopython
 ```
-** CITATIONS **
+**CITATIONS**
+
 Kazutaka K, Daron M. S. 2013. MAFFT Multiple Sequence Alignment Software Version 7: Improvements in Performance and Usability, Molecular Biology and Evolution. 30:4(772–780). https://doi.org/10.1093/molbev/mst010
+
+Capella-Gutiérrez S, Silla-Martínez M, Gabaldón T. 2009. trimAl: a tool for automated alignment trimming in large-scale phylogenetic analyses. Bioinformatics. 25:15(1972–1973). https://doi.org/10.1093/bioinformatics/btp348
