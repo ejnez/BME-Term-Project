@@ -19,9 +19,21 @@ MSA.py
 - subprocess
 
 # basic download information #
-- pip install biopython
-- sudo apt-get install mafft
-- git clone https://github.com/inab/trimal.git
+Biopython:
+```pip install biopython```
+Requests:
+```pip install requests```
+MAFFT:
+```sudo apt-get install mafft```
+Trimal:
+```
+git clone https://github.com/inab/trimal.git
+
+cd trimal
+cd Source
+
+make
+```
 
 
 **other sorting stuff this part is not organized at all **
