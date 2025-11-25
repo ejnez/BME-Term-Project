@@ -19,12 +19,12 @@ MSA.py
 - subprocess
 
 # basic download information #
--pip install biopython
--sudo apt-get install mafft
--git clone https://github.com/inab/trimal.git
+- pip install biopython
+- sudo apt-get install mafft
+- git clone https://github.com/inab/trimal.git
 
 
-**other sorting stuff this part is not organized at all)**
+**other sorting stuff this part is not organized at all **
 ```sudo apt install -y python3 python3-pip
 
 sudo apt install python3.12-venv
