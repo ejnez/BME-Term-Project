@@ -29,7 +29,7 @@ Then I will get a file of normalized lifespan. Lifespan, RES file, and Phylogene
 **
 
 
-#Dataset_extraction.py
+# Dataset_extraction.py
 
 FOXO3 sequences are extracted from Uniprot, Ensembl, AND NCBI, in that order.
 If a sequence isn't found in Uniprot it's then searched in Ensembl, and if not found there
@@ -207,7 +207,7 @@ YSNSLSLPVMGHDKFPSDLDLDIFNGSLECDMESIIRSELMDADGLDFNFDSLISAQNVV
 TLNVGNFTGAKQASSQSWVPG
 ```
 
-#MSA.py
+# MSA.py
 
 The MSA file takes the sequence files from Data_extraction.py, aligns them using MAFFT (Kazutaka and Daron 2013). Then alignments are trimmed using TrimAl (in order to reduce noise) (Capella-Gutiérrez et al 2009). The test run will output every file (for manually checking quality), so there will be the alignment files before trimming, and the full final sequencs after alignment and trimming. The full run will only output final sequences.
 
@@ -538,7 +538,7 @@ DRFPSDLDLDIFNGSLDCDVDSIIRSELMDSDGLDFNFDALM--QNAVSLNVGNFTGTKQ
 - full_IDR_final.fasta
 
   
-#HMM_build.py
+# HMM_build.py
 
 I utilized HMMer just to verify orthology, and if alignments are clean. I ran them for both the DBD and full sequence, keeping in mind that the disordered regions in the full sequence might affect results. I only saved the file for my DBD HMMer and posted it below. From this file I observed that EFFN was very low (2.55) for a sample size of 72, this reveals that the sequences are all very similar. This confirms (I think) that my sequences are very conserved, orthologous and likely correctly aligned. My full HMM_build file output, had an EFFN = 0.681702, for 73 sequences and was probably affected by IDR regions.
 
@@ -795,7 +795,7 @@ Chrysemys_picta            -          full_DBD_final       -            2.3e-08 
 # [ok]
 ```
 
-#Phyl_tree.py
+# Phyl_tree.py
 
 I replicated the code created by Osbourne and others in python because I'm more comfortable with it. To create my phylogenetic tree I use a distance based method called neighbor joining. I felt this was a good choice considering again, my smaller 73 sequence sample size.
 
