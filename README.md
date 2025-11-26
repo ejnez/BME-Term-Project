@@ -2,7 +2,7 @@
 
 **Code descriptions (libraries, output, and running)**
 
-**Summary: 
+Summary: 
 FOXO3 sequences are extracted from Uniprot, Ensembl, AND NCBI, in that order.
 If a sequence isn't found in Uniprot it's then searched in Ensembl, and if not found there
 it searches NCBI last. All NCBI sequences are inputted in BLAST to check for orthology using human FOXO3 sequence.
