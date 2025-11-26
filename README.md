@@ -676,7 +676,7 @@ HMM          A        C        D        E        F        G        H        I   
 ```
 
 - {name}_DBD_hmmsearch.tbl
-- 
+
 ```
 #                                                                     --- full sequence ---- --- best 1 domain ---- --- domain number estimation ----
 # target name              accession  query name           accession    E-value  score  bias   E-value  score  bias   exp reg clu  ov env dom rep inc description of target
@@ -766,18 +766,40 @@ Chrysemys_picta            -          full_DBD_final       -            2.3e-08 
 # [ok]
 ```
 
+**Phyl_tree.py**
+
+I utilized HMMer just to verify orthology, and if alignments are clean. I ran them for both the DBD and full sequence, keeping in mind that the disordered regions in the full sequence might affect results. I only saved the file for my DBD HMMer and posted it below. From this file I observed that EFFN was very low (2.55) for a sample size of 72, this reveals that the sequences are all very similar. This confirms that my sequences are orthologous and likely correctly aligned. This was reinforced by my full HMM_build file output, where EFFN = 0.681702, for 73 sequences.
+
+*Libraries:*
+- AlignIO
+- DistanceCalculator
+- DistanceTreeConstructor
+- Phylo
+- matplotlib.pyplot
+
+*RUN:*
+```
+python3 Phyl_tree
+```
+
 # basic download information #
 Biopython:
 
-```pip install biopython```
+```
+pip install biopython
+```
 
 Requests:
 
-```pip install requests```
+```
+pip install requests
+```
 
 MAFFT:
 
-```sudo apt-get install mafft```
+```
+sudo apt-get install mafft
+```
 
 Trimal:
 ```
@@ -793,9 +815,15 @@ HMMer:
 sudo apt install hmmer
 ```
 
+Phylogenic tree
+```
+pip install biopython scikit-bio
+pip install matplotlib
+```
 
 **other sorting stuff this part is not organized at all**
-```sudo apt install -y python3 python3-pip
+```
+sudo apt install -y python3 python3-pip
 
 sudo apt install python3.12-venv
 
