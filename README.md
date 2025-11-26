@@ -26,7 +26,7 @@ I replicated the code created by Osbourne and others in python to create my phyl
 The res.py code from the paper on p53 seems applicable to my case, so I used it to create a csv file of residue specific scores.
 
 Then I will get a file of normalized lifespan. Lifespan, RES file, and Phylogenetic tree will be used with a PGLS code for a final analysis. (hopefully theres something).
-***
+**
 
 
 #Dataset_extraction.py
