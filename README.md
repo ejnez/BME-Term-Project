@@ -223,19 +223,54 @@ NSSAGW
 
 # Phyl_tree.py
 
-I replicated the code created by Osbourne and others in python because I'm more comfortable with it. To create my phylogenetic tree I use a distance based method called neighbor joining. I felt this was a good choice considering again, my smaller sequence and sample size.
+I reused the code created by Osbourne and others, making adjustments so it applied to my code (2024). To create the phylogenetic tree it uses a distance based method called neighbor joining. I felt this was also good choice considering again, my smaller sequence and sample size.
 
 
 *Libraries:*
-- AlignIO
-- DistanceCalculator
-- DistanceTreeConstructor
-- Phylo
-- matplotlib.pyplot
+library(ape)   
+library(seqinr)
+library(Biostrings)
+library(phytools)
+library(phangorn)
 
 *RUN:*
 ```
 python3 Phyl_tree.py
+```
+
+# res.py
+
+This is another code I reused and adapted from Osbourne and others as it was applicable for my case. The code converts fasta files to arrays, then it calculates a position weight matrix from the array of aligned sequences. In the end it calculates background frequency of each residue over the aligned sequences, and the position score using position weight matrix and background frequency.
+
+The code calculates the scores for every single order, and outputs {order}_res_score.csv.
+
+*Libraries:*
+import argparse
+import math
+import pandas as pd
+from Bio import SeqIO
+import re
+
+*RUN:*
+```
+python3 res.py
+```
+
+# PGLS_model.py
+
+Calculates the Phylogenetic Generalized Least Squares using the Brownian covariance matrix, Residue scores, and phylogenetic tree.
+
+The code outputs the PGLS for every single order in files formatted "{order}_PGLS_results.csv"
+
+*Libraries*
+import pandas as pd
+import numpy as np
+from skbio import TreeNode
+import statsmodels.api as sm
+
+*RUN*
+```
+python3 PGLS_model.py
 ```
 
 # basic download information #
