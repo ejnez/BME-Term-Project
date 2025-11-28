@@ -2,32 +2,6 @@
 
 **Code descriptions (libraries, output, and running)**
 
-Summary: 
-FOXO3 sequences are extracted from Uniprot, Ensembl, AND NCBI, in that order.
-If a sequence isn't found in Uniprot it's then searched in Ensembl, and if not found there
-it searches NCBI last. All NCBI sequences are inputted in BLAST to check for orthology using human FOXO3 sequence.
-
-The sequences are then split into 3 files, the full file has the entire sequences, the DBD file
-has only the DNA binding domain, using the coordinates given by the human FOXO3 sequence in uniprot (157-251).
-Finally the IDR file has all of the other (likely disordered regions).
-
-The MSA file takes the sequence files from Data_extraction.py, aligns them using MAFFT (Kazutaka and Daron 2013). Then alignments are trimmed using TrimAl (in order to reduce noise) (Capella-Gutiérrez et al 2009). The test run will output every file (for manually checking quality), so there will be the alignment files before trimming, and the full final sequencs after alignment and trimming. The full run will only output final sequences.
-
-MAFFT alignment parameters
-- DBD sequence: mafft --localpair --genafpair --maxiterate 1000 --reorder --adjustdirection --thread N infile *L-INS-i
-- IDR sequence and full sequence:  --genafpair --maxiterate 1000 --ep 0 --adjustdirection --thread N infile *E-INS-i
-
-I chose *L-INS-i for the DBD sequences because it's likely the most accurate, and since the DBD region is highly conserved I was certain alignment would be pretty clean (Kazutaka and Daron 2013). For the whole sequence, and IDR sequence I decided to use *E-INS-i with --ep 0 because there are a lot of disordered regions which might contribute to excess gaps (Kazutaka and Daron 2013). Both of these are accuracy oriented, which I prioritized since I only have a sample size of 73 species (Kazutaka and Daron 2013). 
-
-I utilized HMMer just to verify orthology, and if alignments are clean. I ran them for both the DBD and full sequence, keeping in mind that the disordered regions in the full sequence might affect results. I only saved the file for my DBD HMMer and posted it below. From this file I observed that EFFN was very low (2.55) for a sample size of 72, this reveals that the sequences are all very similar. This confirms (I think) that my sequences are very conserved, orthologous and likely correctly aligned. My full HMM_build file output, had an EFFN = 0.681702, for 73 sequences and was probably affected by IDR regions.
-
-I replicated the code created by Osbourne and others in python to create my phylogenetic tree. I use a distance based method called neighbor joining. I felt this was a good choice considering again, my smaller 73 sequence sample size.
-
-The res.py code from the paper on p53 seems applicable to my case, so I used it to create a csv file of residue specific scores.
-
-Then I will get a file of normalized lifespan. Lifespan, RES file, and Phylogenetic tree will be used with a PGLS code for a final analysis. (hopefully theres something).
-
-
 # Dataset_extraction.py
 
 There are 5 csv files named {order}_Species.csv, each file contains a list of species, their order, their average lifespan, their maximum lifespan, and their common name.
@@ -61,7 +35,7 @@ The full sequence is then used by HMMer alongside the Pfam database in order to 
 *run 1 order at a time:*
 
 ```
-python3 Dataset_extraction.py {order}
+python3 Data_extraction.py {order}
 ```
 
 *Output ({name} = full or test):*
