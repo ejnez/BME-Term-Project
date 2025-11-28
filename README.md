@@ -320,3 +320,17 @@ pip install biopython
 Kazutaka K, Daron M. S. 2013. MAFFT Multiple Sequence Alignment Software Version 7: Improvements in Performance and Usability, Molecular Biology and Evolution. 30:4(772–780). https://doi.org/10.1093/molbev/mst010
 
 Capella-Gutiérrez S, Silla-Martínez M, Gabaldón T. 2009. trimAl: a tool for automated alignment trimming in large-scale phylogenetic analyses. Bioinformatics. 25:15(1972–1973). https://doi.org/10.1093/bioinformatics/btp348
+
+Osbourne R, Thayer K. 2025. Structural and mechanistic diversity in p53-mediated regulation of organismal longevity across taxonomical orders. PLOS. 21(5). https://doi.org/10.1371/journal.pcbi.1012382
+
+Son J, et al. 2024. FOXO-regulated OSER1 reduces oxidative stress and extends lifespan in multiple species. Nature. 15:7144. https://doi.org/10.1038/s41467-024-51542-z
+
+Potter S, et al. 2018. HMMER web server: 2018 update. 46:1(200-204). Nucleic Acids Research. https://doi.org/10.1093/nar/gky448
+
+Paysan-Lafosse T, et al. 2024. The Pfam protein families database: embracing AI/ML. Nucleic Acids Research. 53:1(523-524). https://doi.org/10.1093/nar/gkae997
+
+Hori Y, et al. 2013. Regulation of FOXOs and p53 by SIRT1 Modulators under Oxidative Stress. PMC. 8(9) https://doi.org/10.1371/journal.pone.0073875
+
+Dansen B, & Burgering, T. 2008. Unravelling the tumor-suppressive functions of FOXO proteins. Trends Cell Biol. 18(421–429). doi: 10.1016/j.tcb.2008.07.004. 
+
+Camacho C, et al. 2009. BLAST+: architecture and applications. BMC Bioinformatics, 10(421).
